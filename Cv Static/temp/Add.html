@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+<h11><center><b>Add CV to Database</b> </center> </h11>
+
+    <center>
+    <from action="" method="post">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input type="submit">
+    </from>
+    </center>
+{% for i in messages %}
+{{i}}
+{% endfor %}
+
+{% endblock %}
